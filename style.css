@@ -197,6 +197,89 @@ body {
     display: none;
 }
 
+/* --- RESPONSIVIDAD (MOBILE FIRST / ADAPTACIONES) --- */
+@media (max-width: 768px) {
+    /* Hero: Bajamos el tamaño de letra */
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content p { font-size: 1.1rem; }
+
+    /* Ocultamos las imágenes de fondo en móviles porque no hay mouse 
+       para el efecto y saturan la pantalla pequeña */
+    .parallax-container {
+        display: none;
+    }
+
+    /* Navegación: El botón de volver y el logo se pelean el espacio */
+    .btn-back-fixed {
+        top: 15px;
+        left: 10px;
+        min-width: auto;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .portfolio-logo {
+        height: 80px; /* Logo mucho más pequeño en móvil */
+        top: 5px;
+        right: 10px;
+    }
+
+    .portfolio-nav {
+        padding-top: 100px; /* Espacio para que el título no choque con el logo/botón */
+    }
+
+    /* Filtros: De lateral fijo a menú horizontal superior */
+    .filter-sidebar {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        flex-direction: row;
+        overflow-x: auto; /* Permite scroll horizontal si hay muchos filtros */
+        padding: 10px;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+        z-index: 5;
+    }
+
+    .filter-btn {
+        min-width: max-content;
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    /* Sección: Quitamos el margen de 220px que empujaba todo */
+    .portfolio-section {
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    /* Grilla: Ajustamos el tamaño mínimo de los cuadrados */
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+    }
+
+    /* Redes sociales: Las hacemos más pequeñas */
+    .social-container {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .btn-social-fixed {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .btn-social-fixed img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 /* Contenedor relativo para posicionar el icono de play */
 .portfolio-item {
     position: relative;
