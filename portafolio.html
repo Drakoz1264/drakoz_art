@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Mis Trabajos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="portfolio-page">
+    <!-- Capa para la transición -->
+    <div class="page-transition-overlay" id="transition-overlay"></div>
+
+    <nav class="portfolio-nav">
+        <a href="index.html" class="btn-primary btn-back-fixed">← Volver al inicio</a>
+        <h1>Mis Proyectos 3D</h1>
+        <img src="Img/Drakoz_Logo.png" alt="Drakoz Logo" class="portfolio-logo">
+    </nav>
+
+    <!-- Botonera de Filtros Izquierda -->
+    <aside class="filter-sidebar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="skull">Crystal Skull</button>
+        <button class="filter-btn" data-filter="keyboard">HyperX Keyboard</button>
+        <button class="filter-btn" data-filter="tvman">TvMan Character</button>
+        <button class="filter-btn" data-filter="others">Otros</button>
+    </aside>
+
+    <section class="portfolio-section">
+        <div class="portfolio-grid">
+            <!-- Video del Proyecto Keyboard primero -->
+            <div class="portfolio-item" data-category="keyboard"><video src="https://cdn.artstation.com/p/video_sources/001/148/993/keyboard-animation-video-1.mp4" class="lightbox-trigger focus-keyboard" autoplay muted loop></video></div>
+            <div class="portfolio-item" data-category="skull"><video src="https://cdn.artstation.com/p/video_sources/002/935/656/comp-1-1.mp4" class="lightbox-trigger focus-skull" autoplay muted loop></video></div>
+            <div class="portfolio-item" data-category="tvman"><video src="https://cdn.artstation.com/p/video_sources/003/311/019/characterxdfinalvideo.mp4" class="lightbox-trigger focus-tvman" autoplay muted loop></video></div>
+
+
+            <!-- Crystal Skull -->            
+            <div class="portfolio-item" data-category="skull"><img src="https://cdnb.artstation.com/p/assets/images/images/093/602/215/large/claudio-garces-render-1.webp?1762980736" alt="Render 4" class="lightbox-trigger focus-skull"></div>
+            <div class="portfolio-item" data-category="skull"><img src="https://cdnb.artstation.com/p/assets/images/images/093/602/219/large/claudio-garces-render-2.webp?1762980714" alt="Render 7" class="lightbox-trigger focus-skull"></div>
+
+            <!-- Keyboard -->
+            <div class="portfolio-item" data-category="keyboard"><img src="https://cdna.artstation.com/p/assets/images/images/058/598/982/large/claudio-garces-cherrymx-switch-render.jpg?1674548696" alt="Render 1" class="lightbox-trigger focus-keyboard"></div>
+            <div class="portfolio-item" data-category="keyboard"><img src="https://cdnb.artstation.com/p/assets/images/images/058/598/927/large/claudio-garces-keyboard-render.jpg?1674548519" alt="Render 3" class="lightbox-trigger focus-keyboard"></div>
+            <div class="portfolio-item" data-category="keyboard"><img src="https://cdna.artstation.com/p/assets/images/images/058/598/938/large/claudio-garces-keyboard-render-side-logo.jpg?1674548548" alt="Render 8" class="lightbox-trigger"></div>
+
+            <!-- TvMan Character -->
+            <div class="portfolio-item" data-category="tvman"><img src="https://cdnb.artstation.com/p/assets/images/images/070/100/101/large/claudio-garces-tvman-artstation.jpg?1701764245" alt="Render 6" class="lightbox-trigger focus-tvman"></div>
+
+            <!-- Otros Proyectos -->
+            <div class="portfolio-item" data-category="others"><img src="https://cdnb.artstation.com/p/assets/images/images/057/983/937/large/claudio-garces-dulcesito2-watermark.jpg?1673123981" alt="Render 2" class="lightbox-trigger"></div>
+            <div class="portfolio-item" data-category="others"><img src="https://cdna.artstation.com/p/assets/images/images/073/520/130/large/claudio-garces-nightrider-render1-edited.jpg?1709836499" alt="Render 5" class="lightbox-trigger"></div>
+            <div class="portfolio-item" data-category="others"><img src="https://cdna.artstation.com/p/assets/images/images/058/318/902/large/claudio-garces-render2.jpg?1673895864" alt="Render 9" class="lightbox-trigger"></div>
+            <div class="portfolio-item" data-category="others"><img src="https://cdnb.artstation.com/p/assets/images/images/093/106/663/large/claudio-garces-lampara2-5.webp?1761608578" alt="Render 10" class="lightbox-trigger"></div>
+            <div class="portfolio-item" data-category="others"><img src="https://cdna.artstation.com/p/assets/images/images/097/955/504/large/claudio-garces-render-2026-v3-edited.webp?1775683979" alt="Render 10" class="lightbox-trigger"></div>
+
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #666;">
+        <p>&copy; 2024 Drakoz Art - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Contenedor de Redes Sociales -->
+    <div class="social-container">
+        <a href="mailto:drakoz.art@gmail.com" class="btn-social-fixed" title="Gmail">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+        </a>
+        <a href="https://wa.me/56957641994" class="btn-social-fixed" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.artstation.com/drakoz" class="btn-social-fixed" target="_blank" rel="noopener noreferrer" title="ArtStation">
+            <img src="https://img.icons8.com/fluent/1200/artstation.jpg" alt="ArtStation">
+        </a>
+        <a href="https://www.instagram.com/drakoz_art" class="btn-social-fixed" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
+    </div>
+
+    <script src="portfolio-script.js"></script>
+
+</body>
+</html>
