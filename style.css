@@ -416,3 +416,41 @@ body.no-scroll {
     pointer-events: none;
     transition: opacity 0.5s ease;
 }
+
+/* --- Lógica de Colapso para Redes Sociales (Solo Portafolio) --- */
+.portfolio-page .social-container {
+    flex-direction: row; /* Expansión horizontal hacia la izquierda */
+    align-items: center;
+}
+
+/* Ocultamos los links por defecto en portafolio */
+.portfolio-page .social-container .btn-social-fixed:not(.btn-toggle-social) {
+    opacity: 0;
+    transform: translateX(20px) scale(0);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Cuando el contenedor está activo, mostramos los links */
+.portfolio-page .social-container.active .btn-social-fixed {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    pointer-events: auto;
+}
+
+/* Estilo específico para el botón de toggle */
+.btn-toggle-social {
+    background-color: #ff5722 !important; /* Color naranja de acento */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-toggle-social img {
+    filter: brightness(0) invert(1); /* Icono blanco */
+    transition: transform 0.3s ease;
+    padding-right: 3px; /* Corrección óptica para centrar el icono de compartir */
+}
+
+.social-container.active .btn-toggle-social img {
+    transform: rotate(45deg); /* Efecto de rotación al abrir */
+}

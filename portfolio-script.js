@@ -123,4 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); }, { once: true }); // Cierra con la tecla Esc
         });
     });
+
+    // --- LÓGICA DE COLAPSO REDES SOCIALES ---
+    const socialToggle = document.getElementById('social-toggle');
+    const socialMenu = document.getElementById('social-menu');
+
+    if (socialToggle && socialMenu) {
+        socialToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            socialMenu.classList.toggle('active');
+        });
+    }
 });
