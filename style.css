@@ -43,6 +43,19 @@ body {
     will-change: transform; /* Optimiza el rendimiento de la animación */
 }
 
+/* Estilo para la foto de perfil en el Hero */
+.hero-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff5722; /* Borde naranja a juego con el nombre */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 .hero-content h1 {
     position: relative;
     z-index: 2;
@@ -87,7 +100,7 @@ body {
 /* 4. Estilo para el contenedor de redes sociales */
 .social-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 50px;
     right: 30px;
     z-index: 100; /* Por encima del paralaje y el contenido */
     display: flex;
@@ -130,6 +143,16 @@ body {
     z-index: 110; /* Por encima de los filtros */
     min-width: 180px; /* Misma anchura que los botones de filtro para consistencia */
     text-align: center;
+}
+
+/* Estilo para el logo en la página de inicio (esquina superior izquierda) */
+.index-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 150px;
+    z-index: 110;
+    pointer-events: none; /* Permite interactuar con elementos debajo */
 }
 
 /* Estilo para el logo en la esquina derecha */
@@ -204,6 +227,11 @@ body {
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content p { font-size: 1.1rem; }
 
+    .hero-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
     .parallax-container {
         display: flex;
         flex-direction: column;
@@ -240,9 +268,17 @@ body {
     .portfolio-logo {
         height: 80px; /* Logo mucho más pequeño en móvil */
         bottom: 10px;
-        left: 10px;
+        left: 50%;
+        transform: translateX(-50%);
         top: auto;
         right: auto;
+    }
+
+    .index-logo {
+        height: 80px; /* Logo más pequeño en móvil */
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .portfolio-nav {
@@ -285,9 +321,17 @@ body {
 
     /* Redes sociales: Las hacemos más pequeñas */
     .social-container {
-        bottom: 15px;
-        right: 15px;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
         gap: 10px;
+        width: max-content;
+    }
+
+    /* En portafolio, subimos las redes sociales para no tapar el logo centrado */
+    .portfolio-page .social-container {
+        bottom: 115px;
     }
 
     .btn-social-fixed {
