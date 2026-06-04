@@ -135,10 +135,11 @@ body {
 /* Estilo para el logo en la esquina derecha */
 .portfolio-logo {
     position: fixed;
-    top: 0px;
-    right: 20px;
-    height: 210px; /* Ajusta este tamaño según prefieras */
+    bottom: 20px;
+    left: 20px;
+    height: 150px; /* Ajusta este tamaño según prefieras */
     z-index: 110;
+    pointer-events: none; /* Evita que el logo bloquee clics en elementos debajo */
 }
 
 .portfolio-nav {
@@ -146,8 +147,8 @@ body {
     display: flex;
     justify-content: center; /* Centramos el título ahora que el botón es fijo */
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0 60px 0 240px; /* Alineado con el margen de la sección de portafolio */
 }
 
 /* 7. Estilos para la Botonera de Filtros */
@@ -182,8 +183,8 @@ body {
 }
 
 .portfolio-section {
-    max-width: 1400px;
-    margin: 0 auto 0 220px; /* Margen izquierdo para dejar espacio a la botonera */
+    max-width: 100%;
+    margin: 0 60px 0 240px; /* Ocupa el ancho disponible, manteniendo espacio para el menú y margen derecho */
     padding: 20px;
 }
 
@@ -203,10 +204,28 @@ body {
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content p { font-size: 1.1rem; }
 
-    /* Ocultamos las imágenes de fondo en móviles porque no hay mouse 
-       para el efecto y saturan la pantalla pequeña */
     .parallax-container {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Espaciado uniforme entre las imágenes */
+        pointer-events: none;
+    }
+
+    .parallax-layer {
+        position: relative !important; /* Salen del modo absoluto para no stackearse */
+        display: block !important; /* Mostramos todas las imágenes (las 8) para rellenar el fondo */
+        top: auto !important;
+        left: auto !important;
+        width: 90% !important; /* Un poco más anchas para llenar mejor los bordes */
+        height: 130px !important; /* Un poco más altas para dar más presencia */
+        opacity: 0.12; /* Un toque más de visibilidad */
+        filter: grayscale(100%) blur(8px); /* Blur ligeramente mayor para que no distraiga del texto */
+        transform: none !important; /* Asegura que el JS no mueva nada */
+        object-fit: cover;
+        border-radius: 15px;
+        mix-blend-mode: normal; 
     }
 
     /* Navegación: El botón de volver y el logo se pelean el espacio */
@@ -220,8 +239,10 @@ body {
 
     .portfolio-logo {
         height: 80px; /* Logo mucho más pequeño en móvil */
-        top: 5px;
-        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        top: auto;
+        right: auto;
     }
 
     .portfolio-nav {
@@ -414,7 +435,9 @@ body.no-scroll {
     background-color: #000;
     z-index: 10000; /* Por encima de absolutamente todo */
     pointer-events: none;
-    transition: opacity 0.5s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    transition: opacity 1.5s ease;
 }
 
 /* --- Lógica de Colapso para Redes Sociales (Solo Portafolio) --- */

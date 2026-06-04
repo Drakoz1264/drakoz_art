@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.style.opacity = '1';
             setTimeout(() => {
                 window.location.href = targetUrl;
-            }, 500);
+            }, 1500); // Sincronizado con la transición de 1.5s
         });
     }
 

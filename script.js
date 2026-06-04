@@ -15,12 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
             overlay.style.opacity = '1';
             setTimeout(() => {
                 window.location.href = targetUrl;
-            }, 500); // Esperamos a que termine la animación de CSS
+            }, 1500); // Esperamos a que termine la animación de CSS (1.5 segundos)
         });
     }
 });
 
 document.addEventListener("mousemove", (e) => {
+    // Desactivar el paralaje en dispositivos móviles para optimizar y evitar conflictos
+    if (window.innerWidth <= 768) return;
+
     const layers = document.querySelectorAll(".parallax-layer");
     
     const mouseX = e.clientX;
