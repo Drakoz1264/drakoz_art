@@ -150,7 +150,9 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
+    width: auto;
     height: 150px;
+    object-fit: contain;
     z-index: 110;
     pointer-events: none; /* Permite interactuar con elementos debajo */
 }
@@ -160,7 +162,9 @@ body {
     position: fixed;
     bottom: 20px;
     left: 20px;
+    width: auto;
     height: 150px; /* Ajusta este tamaño según prefieras */
+    object-fit: contain;
     z-index: 110;
     pointer-events: none; /* Evita que el logo bloquee clics en elementos debajo */
 }
@@ -227,6 +231,11 @@ body {
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content p { font-size: 1.1rem; }
 
+    .hero-content {
+        /* Añadimos un margen superior para que el contenido no choque con el logo en pantallas cortas */
+        margin-top: 60px;
+    }
+
     .hero-avatar {
         width: 120px;
         height: 120px;
@@ -275,10 +284,11 @@ body {
     }
 
     .index-logo {
-        height: 80px; /* Logo más pequeño en móvil */
-        top: 50px;
+        height: 70px; /* Reducimos un poco más el tamaño para ganar espacio vertical */
+        top: 20px;    /* Lo subimos más cerca del borde superior */
         left: 50%;
         transform: translateX(-50%);
+        transition: none !important; /* Forzamos a que no haya ninguna animación de movimiento al cargar */
     }
 
     .portfolio-nav {
